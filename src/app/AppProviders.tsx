@@ -1,10 +1,6 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
+import { ThemeProvider } from '../shared/context/ThemeContext';
 
-interface AppProvidersProps {
-  children: ReactNode;
-}
-
-export const AppProviders = ({ children }: AppProvidersProps) => {
-  // هنا سنضع ThemeProvider و AuthProvider لاحقاً
-  return <>{children}</>;
+export const AppProviders = ({ children }: { children: ReactNode }) => {
+  return <ThemeProvider>{children}</ThemeProvider>;
 };
